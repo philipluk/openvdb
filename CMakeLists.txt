@@ -45,6 +45,9 @@
 cmake_minimum_required(VERSION 3.3)
 project(OpenVDB)
 
+# ====== Tangent Rez Deps
+include(${CMAKE_CURRENT_SOURCE_DIR}/rez_deps.cmake)
+
 ###### OpenVDB Build/Component Options
 
 include(CMakeDependentOption)
