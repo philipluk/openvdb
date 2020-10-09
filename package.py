@@ -2,13 +2,13 @@
 
 name = 'openvdb'
 
-version = '7.0.0-ta.1.0.0'
+version = '7.0.0-ta.1.1.0'
 
 authors = [
     'benjamin.skinner',
 ]
 
-build_requires = [
+requires = [
     'openexr-2.4.0',
     'tbb-2019',
     'blosc-1.5',
