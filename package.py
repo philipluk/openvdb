@@ -2,7 +2,7 @@
 
 name = 'openvdb'
 
-version = '7.0.0-ta.1.1.0'
+version = '7.0.0-ta.1.2.0'
 
 authors = [
     'benjamin.skinner',
@@ -12,7 +12,6 @@ requires = [
     'openexr-2.4.0',
     'tbb-2019',
     'blosc-1.5',
-    'boost-1.69.0',
 ]
 
 @early()
@@ -24,9 +23,10 @@ def private_build_requires():
         return ['gcc-7']
 
 variants = [
-    ['platform-windows', 'arch-x64', 'os-windows-10'],
-    #['platform-linux', 'arch-x64'],
+    ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.69'],
+    ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.65'],
 ]
+
 
 def commands():
 
