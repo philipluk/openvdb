@@ -2,7 +2,7 @@
 
 name = 'openvdb'
 
-version = '7.0.0-ta.1.2.0'
+version = '7.1.0-houdini-18.5.351-ta.1.0.0'
 
 authors = [
     'benjamin.skinner',
@@ -12,19 +12,19 @@ requires = [
     'openexr-2.4.0',
     'tbb-2019',
     'blosc-1.5',
+    'hboost-1.72.0-houdini',
 ]
 
-@early()
-def private_build_requires():
-    import sys
-    if 'win' in str(sys.platform):
-        return ['visual_studio']
-    else:
-        return ['gcc-7']
+private_build_requires = [
+    'python',
+    'houdini-18.5.351',
+]
+
+build_command = "python {root}/rez_build.py"
 
 variants = [
-    ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.69'],
-    ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.65'],
+    ['platform-windows', 'arch-x64', 'os-windows-10'],
+    #['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.65'],
 ]
 
 
