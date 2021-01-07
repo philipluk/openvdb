@@ -2,7 +2,7 @@
 
 name = 'openvdb'
 
-version = '7.1.0-houdini-18.5.351-ta.1.0.1'
+version = '7.1.0-houdini-18.5.351-ta.1.1.0'
 
 authors = [
     'benjamin.skinner',
@@ -24,7 +24,7 @@ build_command = "python {root}/rez_build.py"
 
 variants = [
     ['platform-windows', 'arch-x64', 'os-windows-10'],
-    #['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.65'],
+    ['platform-linux', 'arch-x86_64', 'os-centos-7'],
 ]
 
 
@@ -36,6 +36,7 @@ def commands():
     env.OPENVDB_PACKAGE_VERSION.set(split_versions[1])
 
     env.OPENVDB_ROOT.set("{root}")
+    env.OPENVDB_LOCATION.set("{root}")
     env.OPENVDB_ROOT_DIR.set("{root}")
     env.OPENVDB_INCLUDE_DIR.set("{root}/include")
     env.OPENVDB_LIBRARY_DIR.set("{root}/lib")
