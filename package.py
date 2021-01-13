@@ -2,17 +2,28 @@
 
 name = 'openvdb'
 
-version = '7.0.0-ta.1.2.0'
+version = '7.0.0-ta.1.2.1'
 
 authors = [
     'benjamin.skinner',
+    'kiki',
 ]
 
 requires = [
     'openexr-2.4.0',
     'tbb-2019',
     'blosc-1.5',
+    'zlib',
 ]
+
+@early()
+def build_command():
+    import sys
+    if "win" in str(sys.platform):
+        return "{root}\\rez_build.ps1"
+    else:
+        raise NotImplementedError("OS not yet supported, sorry.")
+
 
 @early()
 def private_build_requires():
@@ -22,14 +33,15 @@ def private_build_requires():
     else:
         return ['gcc-7']
 
+
 variants = [
+    ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.70'],
     ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.69'],
     ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.65'],
 ]
 
 
 def commands():
-
     # Split and store version and package version
     split_versions = str(version).split('-')
     env.OPENVDB_VERSION.set(split_versions[0])
