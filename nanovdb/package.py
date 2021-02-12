@@ -8,11 +8,6 @@ authors = [
     'sergen.eren'
 ]
 
-requires = [
-    'tbb-2019.U9',
-    'openexr-2.4.0',
-]
-
 @early()
 def private_build_requires():
     import sys
@@ -23,9 +18,9 @@ def private_build_requires():
 
 variants = [
     # Windows
-    ['platform-windows', 'arch-x64', 'os-windows-10', 'boost-1.65.1', 'openvdb-7.1.0-houdini'],
+    ['platform-windows', 'arch-x64', 'os-windows-10'],
     # Linux
-    ['platform-linux', 'arch-x86_64', 'os-centos-7', 'boost-1.65.1', 'openvdb-7.1.0-houdini'],
+    ['platform-linux', 'arch-x86_64', 'os-centos-7'],
 ]
 
 
