@@ -35,7 +35,4 @@ def commands():
     env.NANOVDB_PACKAGE_VERSION.set(split_versions[1])
 
     env.NANOVDB_ROOT.set( "{root}" )
-    env.NANOVDB_LIB_DIR.set( "{root}/lib" )
-    env.NANOVDB_INCLUDE_DIR.set( "{root}/include" )
-
-    env.PATH.append( "{root}/bin" )
+    env.NANOVDB_INCLUDE_DIR.set( "{root}" )
