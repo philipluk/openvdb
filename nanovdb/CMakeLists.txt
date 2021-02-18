@@ -68,6 +68,9 @@ option(NANOVDB_USE_MAGICAVOXEL "Build with MagicaVoxel support" ON)
 option(NANOVDB_ALLOW_FETCHCONTENT
        "Allow FetchContent to download missing dependencies" ON)
 
+# ====== Tangent Rez Deps
+include(${CMAKE_CURRENT_SOURCE_DIR}/rez_deps.cmake)
+
 # -----------------------------------------------------------------------
 # This is required to compile OpenVDB headers on windows.
 if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
