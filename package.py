@@ -2,7 +2,7 @@
 
 name = 'openvdb'
 
-version = '7.1.0-houdini-18.5.499-ta.1.1.0'
+version = '7.2.2-houdini-18.5.499-ta.1.1.0'
 
 authors = [
     'benjamin.skinner',
