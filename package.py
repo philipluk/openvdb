@@ -31,6 +31,7 @@ windows_variants = [
     ['platform-windows', 'arch-x64', 'os-windows-10'],
 ]
 
+@early()
 def variants():
     import sys
     if 'win' in str(sys.platform):
