@@ -2,7 +2,7 @@
 
 name = 'openvdb'
 
-version = '7.1.0-houdini-18.5.351-ta.1.1.0'
+version = '7.1.0-houdini-18.5.499-ta.1.1.0'
 
 authors = [
     'benjamin.skinner',
@@ -17,7 +17,7 @@ requires = [
 
 private_build_requires = [
     'python',
-    'houdini-18.5.351',
+    'houdini-18.5.499',
 ]
 
 build_command = "python {root}/rez_build.py"
