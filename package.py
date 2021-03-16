@@ -22,10 +22,21 @@ private_build_requires = [
 
 build_command = "python {root}/rez_build.py"
 
-variants = [
-    ['platform-windows', 'arch-x64', 'os-windows-10'],
+
+linux_variants = [
     ['platform-linux', 'arch-x86_64', 'os-centos-7'],
 ]
+
+windows_variants = [ 
+    ['platform-windows', 'arch-x64', 'os-windows-10'],
+]
+
+def variants():
+    import sys
+    if 'win' in str(sys.platform):
+        return windows_variants
+    else:
+        return linux_variants
 
 
 def commands():
