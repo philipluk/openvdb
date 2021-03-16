@@ -41,4 +41,4 @@ if __name__ == "__main__":
         
         os.mkdir(lib_dst)
 
-        shutil.copy(src + '/dsolib/libopenvdb_sesi.so.7.1.0', lib_dst + "/libopenvdb.so")
+        shutil.copy(src + '/dsolib/libopenvdb_sesi.so.7.2.2', lib_dst + "/libopenvdb.so")
